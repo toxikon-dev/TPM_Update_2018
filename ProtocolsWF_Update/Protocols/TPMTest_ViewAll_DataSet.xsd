@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TPMTest_ViewAll_DataSet" targetNamespace="http://tempuri.org/TPMTest_ViewAll_DataSet.xsd" xmlns:mstns="http://tempuri.org/TPMTest_ViewAll_DataSet.xsd" xmlns="http://tempuri.org/TPMTest_ViewAll_DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TPMTestConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TPMTestConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Toxikon.ProtocolManager.Properties.Settings.GlobalReference.Default.TPMTestConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_allTableAdapter" GeneratorDataComponentClassName="View_allTableAdapter" Name="View_all" UserDataComponentName="View_allTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TPMTestConnectionString (Settings)" DbObjectName="TPMTest.dbo.View_all" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT SponsorCode, Guidelines, Compliance, ProtocolType, DueDate, RequestStatus, IsActive, RequestedBy, CreatedDate, RequestedDate, ProtocolNumber, TemplateID, Comments, EventDescription, YearNumber, EventID, ID, RequestID, Expr1 FROM dbo.View_all</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SponsorCode" DataSetColumn="SponsorCode" />
+              <Mapping SourceColumn="Guidelines" DataSetColumn="Guidelines" />
+              <Mapping SourceColumn="Compliance" DataSetColumn="Compliance" />
+              <Mapping SourceColumn="ProtocolType" DataSetColumn="ProtocolType" />
+              <Mapping SourceColumn="DueDate" DataSetColumn="DueDate" />
+              <Mapping SourceColumn="RequestStatus" DataSetColumn="RequestStatus" />
+              <Mapping SourceColumn="IsActive" DataSetColumn="IsActive" />
+              <Mapping SourceColumn="RequestedBy" DataSetColumn="RequestedBy" />
+              <Mapping SourceColumn="CreatedDate" DataSetColumn="CreatedDate" />
+              <Mapping SourceColumn="RequestedDate" DataSetColumn="RequestedDate" />
+              <Mapping SourceColumn="ProtocolNumber" DataSetColumn="ProtocolNumber" />
+              <Mapping SourceColumn="TemplateID" DataSetColumn="TemplateID" />
+              <Mapping SourceColumn="Comments" DataSetColumn="Comments" />
+              <Mapping SourceColumn="EventDescription" DataSetColumn="EventDescription" />
+              <Mapping SourceColumn="YearNumber" DataSetColumn="YearNumber" />
+              <Mapping SourceColumn="EventID" DataSetColumn="EventID" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="RequestID" DataSetColumn="RequestID" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TPMTest_ViewAll_DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TPMTest_ViewAll_DataSet" msprop:Generator_UserDSName="TPMTest_ViewAll_DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_all" msprop:Generator_TableClassName="View_allDataTable" msprop:Generator_TableVarName="tableView_all" msprop:Generator_TablePropName="View_all" msprop:Generator_RowDeletingName="View_allRowDeleting" msprop:Generator_RowChangingName="View_allRowChanging" msprop:Generator_RowEvHandlerName="View_allRowChangeEventHandler" msprop:Generator_RowDeletedName="View_allRowDeleted" msprop:Generator_UserTableName="View_all" msprop:Generator_RowChangedName="View_allRowChanged" msprop:Generator_RowEvArgName="View_allRowChangeEvent" msprop:Generator_RowClassName="View_allRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SponsorCode" msprop:Generator_ColumnVarNameInTable="columnSponsorCode" msprop:Generator_ColumnPropNameInRow="SponsorCode" msprop:Generator_ColumnPropNameInTable="SponsorCodeColumn" msprop:Generator_UserColumnName="SponsorCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Guidelines" msprop:Generator_ColumnVarNameInTable="columnGuidelines" msprop:Generator_ColumnPropNameInRow="Guidelines" msprop:Generator_ColumnPropNameInTable="GuidelinesColumn" msprop:Generator_UserColumnName="Guidelines" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Compliance" msprop:Generator_ColumnVarNameInTable="columnCompliance" msprop:Generator_ColumnPropNameInRow="Compliance" msprop:Generator_ColumnPropNameInTable="ComplianceColumn" msprop:Generator_UserColumnName="Compliance" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProtocolType" msprop:Generator_ColumnVarNameInTable="columnProtocolType" msprop:Generator_ColumnPropNameInRow="ProtocolType" msprop:Generator_ColumnPropNameInTable="ProtocolTypeColumn" msprop:Generator_UserColumnName="ProtocolType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DueDate" msprop:Generator_ColumnVarNameInTable="columnDueDate" msprop:Generator_ColumnPropNameInRow="DueDate" msprop:Generator_ColumnPropNameInTable="DueDateColumn" msprop:Generator_UserColumnName="DueDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RequestStatus" msprop:Generator_ColumnVarNameInTable="columnRequestStatus" msprop:Generator_ColumnPropNameInRow="RequestStatus" msprop:Generator_ColumnPropNameInTable="RequestStatusColumn" msprop:Generator_UserColumnName="RequestStatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsActive" msprop:Generator_ColumnVarNameInTable="columnIsActive" msprop:Generator_ColumnPropNameInRow="IsActive" msprop:Generator_ColumnPropNameInTable="IsActiveColumn" msprop:Generator_UserColumnName="IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="RequestedBy" msprop:Generator_ColumnVarNameInTable="columnRequestedBy" msprop:Generator_ColumnPropNameInRow="RequestedBy" msprop:Generator_ColumnPropNameInTable="RequestedByColumn" msprop:Generator_UserColumnName="RequestedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCreatedDate" msprop:Generator_ColumnPropNameInRow="CreatedDate" msprop:Generator_ColumnPropNameInTable="CreatedDateColumn" msprop:Generator_UserColumnName="CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RequestedDate" msprop:Generator_ColumnVarNameInTable="columnRequestedDate" msprop:Generator_ColumnPropNameInRow="RequestedDate" msprop:Generator_ColumnPropNameInTable="RequestedDateColumn" msprop:Generator_UserColumnName="RequestedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ProtocolNumber" msprop:Generator_ColumnVarNameInTable="columnProtocolNumber" msprop:Generator_ColumnPropNameInRow="ProtocolNumber" msprop:Generator_ColumnPropNameInTable="ProtocolNumberColumn" msprop:Generator_UserColumnName="ProtocolNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TemplateID" msprop:Generator_ColumnVarNameInTable="columnTemplateID" msprop:Generator_ColumnPropNameInRow="TemplateID" msprop:Generator_ColumnPropNameInTable="TemplateIDColumn" msprop:Generator_UserColumnName="TemplateID" type="xs:int" />
+              <xs:element name="Comments" msprop:Generator_ColumnVarNameInTable="columnComments" msprop:Generator_ColumnPropNameInRow="Comments" msprop:Generator_ColumnPropNameInTable="CommentsColumn" msprop:Generator_UserColumnName="Comments" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventDescription" msprop:Generator_ColumnVarNameInTable="columnEventDescription" msprop:Generator_ColumnPropNameInRow="EventDescription" msprop:Generator_ColumnPropNameInTable="EventDescriptionColumn" msprop:Generator_UserColumnName="EventDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YearNumber" msprop:Generator_ColumnVarNameInTable="columnYearNumber" msprop:Generator_ColumnPropNameInRow="YearNumber" msprop:Generator_ColumnPropNameInTable="YearNumberColumn" msprop:Generator_UserColumnName="YearNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="EventID" msprop:Generator_ColumnVarNameInTable="columnEventID" msprop:Generator_ColumnPropNameInRow="EventID" msprop:Generator_ColumnPropNameInTable="EventIDColumn" msprop:Generator_UserColumnName="EventID" type="xs:int" minOccurs="0" />
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="RequestID" msprop:Generator_ColumnVarNameInTable="columnRequestID" msprop:Generator_ColumnPropNameInRow="RequestID" msprop:Generator_ColumnPropNameInTable="RequestIDColumn" msprop:Generator_UserColumnName="RequestID" type="xs:int" />
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

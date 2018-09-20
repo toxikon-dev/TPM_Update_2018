@@ -1,0 +1,629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E2C5AA4B-02A4-4148-BC12-F8796B2F3FE4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Toxikon.ProtocolManager</RootNamespace>
+    <AssemblyName>ToxikonProtocolManager</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\xzhu\Documents\Zhu_Toxikon\visualstudio2013\TPM_Update_Publish_9.18\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>TPM-Update</ProductName>
+    <PublisherName>Toxikon_IT_Zhu</PublisherName>
+    <MinimumRequiredVersion>1.0.0.45</MinimumRequiredVersion>
+    <WebPage>index.html</WebPage>
+    <ApplicationRevision>19</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>607E7782E8E136499F4E2F61D638C17CB844BDB5</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Toxikon.ProtocolManager_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>TPMLogo2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\Admin\DepartmentDirectorsController.cs" />
+    <Compile Include="Controllers\CreateProtocolController.cs" />
+    <Compile Include="Controllers\Reports\ReportViewController.cs" />
+    <Compile Include="Controllers\RequestDetailController.cs" />
+    <Compile Include="Controllers\Admin\ListNameController.cs" />
+    <Compile Include="Controllers\Admin\ProtocolNumberUpdateController.cs" />
+    <Compile Include="Controllers\Admin\TemplateGroupsController.cs" />
+    <Compile Include="Controllers\Admin\TemplateListController.cs" />
+    <Compile Include="Controllers\Controller.cs" />
+    <Compile Include="Controllers\Protocols\TemplateOptionsController.cs" />
+    <Compile Include="Controllers\Templates\TwoTextBoxTrueFalseFormController.cs" />
+    <Compile Include="Controllers\Templates\UCToolStripListView1Controller.cs" />
+    <Compile Include="Controllers\HistoryController.cs" />
+    <Compile Include="Controllers\RequestFormController.cs" />
+    <Compile Include="Controllers\TemplatesController.cs" />
+    <Compile Include="Controllers\Templates\CheckBoxOptionsController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\Admin\DepartmentListController.cs" />
+    <Compile Include="Controllers\Templates\ListBoxOptionsController.cs" />
+    <Compile Include="Controllers\Admin\ListItemsController.cs" />
+    <Compile Include="Controllers\Templates\ListViewPopupController.cs" />
+    <Compile Include="Controllers\MainViewController.cs" />
+    <Compile Include="Controllers\Templates\OneTextBoxFormController.cs" />
+    <Compile Include="Controllers\Protocols\ProtocolEventAddController.cs" />
+    <Compile Include="Controllers\Admin\ProtocolEventEditController.cs" />
+    <Compile Include="Controllers\Admin\ProtocolEventsController.cs" />
+    <Compile Include="Controllers\Protocols\ProtocolRequestAddController.cs" />
+    <Compile Include="Controllers\Admin\RoleListController.cs" />
+    <Compile Include="Controllers\Admin\UserEditController.cs" />
+    <Compile Include="Controllers\Admin\UserListController.cs" />
+    <Compile Include="Controllers\Templates\OneTextBoxTrueFalseFormController.cs" />
+    <Compile Include="Controllers\Templates\UCTemplate2Controller.cs" />
+    <Compile Include="Interfaces\Admin\IDepartmentDirectorsView.cs" />
+    <Compile Include="Interfaces\Admin\IListNameView.cs" />
+    <Compile Include="Interfaces\Admin\IProtocolNumberUpdateView.cs" />
+    <Compile Include="Interfaces\ICreateProtocol.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="Interfaces\IHistoryView.cs" />
+    <Compile Include="Interfaces\Reports\IReportView.cs" />
+    <Compile Include="Interfaces\Templates\ITwoTextBoxTrueFalseForm.cs" />
+    <Compile Include="Models\Admin\AuditItemUtility.cs" />
+    <Compile Include="Models\Admin\DepartmentDirector.cs" />
+    <Compile Include="Models\Admin\EmailHandler.cs" />
+    <Compile Include="Models\Reports\ReportModel.cs" />
+    <Compile Include="Models\RequestFormTypes.cs" />
+    <Compile Include="Models\Template.cs" />
+    <Compile Include="Models\Templates\WordProtocol.cs" />
+    <Compile Include="Queries\Ilist.cs" />
+    <Compile Include="Queries\QDepartmentDirectors.cs" />
+    <Compile Include="Queries\QReports.cs" />
+    <Compile Include="Views\Admin\DepartmentDirectorsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\DepartmentDirectorsView.Designer.cs">
+      <DependentUpon>DepartmentDirectorsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateProtocolView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CreateProtocolView.Designer.cs">
+      <DependentUpon>CreateProtocolView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Protocols\ProtocolRequestDirectorView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Protocols\ProtocolRequestDirectorView.Designer.cs">
+      <DependentUpon>ProtocolRequestDirectorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Protocols\ProtocolRequestEditView2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Protocols\ProtocolRequestEditView2.Designer.cs">
+      <DependentUpon>ProtocolRequestEditView2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Protocols\ProtocolRequestCSRView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Protocols\ProtocolRequestCSRView.Designer.cs">
+      <DependentUpon>ProtocolRequestCSRView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\ReportView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\ReportView.Designer.cs">
+      <DependentUpon>ReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RequestDetailView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IRequestForm.cs" />
+    <Compile Include="Interfaces\Templates\ICheckedListBoxForm.cs" />
+    <Compile Include="Interfaces\IDashboardView.cs" />
+    <Compile Include="Interfaces\Admin\IDepartmentListView.cs" />
+    <Compile Include="Interfaces\Templates\IListBoxForm.cs" />
+    <Compile Include="Interfaces\Admin\IListItemsView.cs" />
+    <Compile Include="Interfaces\Templates\IListViewForm.cs" />
+    <Compile Include="Interfaces\IMainView.cs" />
+    <Compile Include="Interfaces\Templates\IOneTextBoxForm.cs" />
+    <Compile Include="Interfaces\Protocols\IProtocolEventAddView.cs" />
+    <Compile Include="Interfaces\Admin\IProtocolEventEditView.cs" />
+    <Compile Include="Interfaces\Protocols\IProtocolEventsView.cs" />
+    <Compile Include="Interfaces\Admin\IRoleListView.cs" />
+    <Compile Include="Interfaces\Admin\IUserEditView.cs" />
+    <Compile Include="Interfaces\Admin\IUserListView.cs" />
+    <Compile Include="Interfaces\Templates\IOneTextBoxTrueFalseForm.cs" />
+    <Compile Include="Interfaces\Protocols\ITemplateOptionsForm.cs" />
+    <Compile Include="Interfaces\Templates\IUCToolStripListView1.cs" />
+    <Compile Include="Interfaces\Templates\IUCTemplate2.cs" />
+    <Compile Include="Models\Admin\AuditHandler.cs" />
+    <Compile Include="Models\Admin\AuditItem.cs" />
+    <Compile Include="Models\Protocols\Comment.cs" />
+    <Compile Include="Models\Admin\ErrorHandler.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Protocols\ProtocolActivity.cs" />
+    <Compile Include="Models\Protocols\ProtocolEvent.cs" />
+    <Compile Include="Models\Protocols\ProtocolNumber.cs" />
+    <Compile Include="Models\Protocols\ProtocolTemplate.cs" />
+    <Compile Include="Models\Protocols\Sponsor.cs" />
+    <Compile Include="Models\Reports\ExcelDataTable.cs" />
+    <Compile Include="Models\Reports\ExcelTemplate.cs" />
+    <Compile Include="Models\Reports\ProtocolRequestReport.cs" />
+    <Compile Include="Models\Protocols\RequestStatuses.cs" />
+    <Compile Include="Models\Admin\UserRoles.cs" />
+    <Compile Include="Queries\QLastSequenceNumber.cs" />
+    <Compile Include="Queries\QListItems.cs" />
+    <Compile Include="Queries\QListNames.cs" />
+    <Compile Include="Queries\QProtocolActivities.cs" />
+    <Compile Include="Queries\QProtocolComments.cs" />
+    <Compile Include="Queries\QProtocolEvents.cs" />
+    <Compile Include="Queries\QProtocolNumbers.cs" />
+    <Compile Include="Queries\QProtocolRequests.cs" />
+    <Compile Include="Queries\QDepartments.cs" />
+    <Compile Include="Queries\QProtocolRequestTemplates.cs" />
+    <Compile Include="Queries\QRoles.cs" />
+    <Compile Include="Queries\QTemplateGroups.cs" />
+    <Compile Include="Queries\QTemplates.cs" />
+    <Compile Include="Queries\QUsers.cs" />
+    <Compile Include="Queries\QTMS.cs" />
+    <Compile Include="Views\Admin\ProtocolNumberUpdateView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\ProtocolNumberUpdateView.Designer.cs">
+      <DependentUpon>ProtocolNumberUpdateView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HistoryView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\HistoryView.Designer.cs">
+      <DependentUpon>HistoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Protocols\ProtocolRequestManagerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Protocols\ProtocolRequestManagerView.Designer.cs">
+      <DependentUpon>ProtocolRequestManagerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Protocols\ProtocolRequestReadOnlyView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Protocols\ProtocolRequestReadOnlyView.Designer.cs">
+      <DependentUpon>ProtocolRequestReadOnlyView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RequestForms\RequestFormAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\RequestForms\RequestFormAdd.Designer.cs">
+      <DependentUpon>RequestFormAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RequestForms\RequestFormAdd2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\RequestForms\RequestFormAdd2.Designer.cs">
+      <DependentUpon>RequestFormAdd2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RequestForms\RequestFormEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\RequestForms\RequestFormEdit.Designer.cs">
+      <DependentUpon>RequestFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RequestForms\RequestFormManagerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\RequestForms\RequestFormManagerView.Designer.cs">
+      <DependentUpon>RequestFormManagerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RequestForms\RequestFormCSRView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\RequestForms\RequestFormCSRView.Designer.cs">
+      <DependentUpon>RequestFormCSRView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RequestForms\RequestFormReadOnly.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\RequestForms\RequestFormReadOnly.Designer.cs">
+      <DependentUpon>RequestFormReadOnly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Templates\CheckedListBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Templates\CheckedListBoxForm.Designer.cs">
+      <DependentUpon>CheckedListBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashboardView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DashboardView.Designer.cs">
+      <DependentUpon>DashboardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Templates\ListBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Templates\ListBoxForm.Designer.cs">
+      <DependentUpon>ListBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\ListItemsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\ListItemsView.Designer.cs">
+      <DependentUpon>ListItemsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Templates\ListViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Templates\ListViewForm.Designer.cs">
+      <DependentUpon>ListViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Protocols\IProtocolRequestAddView.cs" />
+    <Compile Include="Models\Admin\Department.cs" />
+    <Compile Include="Models\Admin\LoginInfo.cs" />
+    <Compile Include="Models\Protocols\ProtocolRequest.cs" />
+    <Compile Include="Models\Admin\Role.cs" />
+    <Compile Include="Models\Protocols\SponsorContact.cs" />
+    <Compile Include="Models\Admin\User.cs" />
+    <Compile Include="Models\Utility.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries\QMatrix.cs" />
+    <Compile Include="Views\Templates\OneTextBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Templates\OneTextBoxForm.Designer.cs">
+      <DependentUpon>OneTextBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Protocols\ProtocolEventAddView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Protocols\ProtocolEventAddView.Designer.cs">
+      <DependentUpon>ProtocolEventAddView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\ProtocolEventEditView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\ProtocolEventEditView.Designer.cs">
+      <DependentUpon>ProtocolEventEditView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Protocols\ProtocolRequestAddView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Protocols\ProtocolRequestAddView.Designer.cs">
+      <DependentUpon>ProtocolRequestAddView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Protocols\ProtocolRequestEditView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Protocols\ProtocolRequestEditView.Designer.cs">
+      <DependentUpon>ProtocolRequestEditView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\UserEditView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\UserEditView.Designer.cs">
+      <DependentUpon>UserEditView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Templates\OneTextBoxTrueFalseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Templates\OneTextBoxTrueFalseForm.Designer.cs">
+      <DependentUpon>OneTextBoxTrueFalseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Protocols\TemplateOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Protocols\TemplateOptionsForm.Designer.cs">
+      <DependentUpon>TemplateOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Templates\TwoTextBoxTrueFalseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Templates\TwoTextBoxTrueFalseForm.Designer.cs">
+      <DependentUpon>TwoTextBoxTrueFalseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Templates\UCTemplate2View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Templates\UCTemplate2View.Designer.cs">
+      <DependentUpon>UCTemplate2View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Templates\UCToolStripListView1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Templates\UCToolStripListView1.Designer.cs">
+      <DependentUpon>UCToolStripListView1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\Admin\DepartmentDirectorsView.resx">
+      <DependentUpon>DepartmentDirectorsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\ProtocolNumberUpdateView.resx">
+      <DependentUpon>ProtocolNumberUpdateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CreateProtocolView.resx">
+      <DependentUpon>CreateProtocolView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\HistoryView.resx">
+      <DependentUpon>HistoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Protocols\ProtocolRequestDirectorView.resx">
+      <DependentUpon>ProtocolRequestDirectorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Protocols\ProtocolRequestEditView2.resx">
+      <DependentUpon>ProtocolRequestEditView2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Protocols\ProtocolRequestManagerView.resx">
+      <DependentUpon>ProtocolRequestManagerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Protocols\ProtocolRequestCSRView.resx">
+      <DependentUpon>ProtocolRequestCSRView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Protocols\ProtocolRequestReadOnlyView.resx">
+      <DependentUpon>ProtocolRequestReadOnlyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\ReportView.resx">
+      <DependentUpon>ReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RequestDetailView.resx">
+      <DependentUpon>RequestDetailView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RequestForms\RequestFormAdd.resx">
+      <DependentUpon>RequestFormAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RequestForms\RequestFormAdd2.resx">
+      <DependentUpon>RequestFormAdd2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RequestForms\RequestFormEdit.resx">
+      <DependentUpon>RequestFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RequestForms\RequestFormManagerView.resx">
+      <DependentUpon>RequestFormManagerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RequestForms\RequestFormCSRView.resx">
+      <DependentUpon>RequestFormCSRView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RequestForms\RequestFormReadOnly.resx">
+      <DependentUpon>RequestFormReadOnly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Templates\CheckedListBoxForm.resx">
+      <DependentUpon>CheckedListBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashboardView.resx">
+      <DependentUpon>DashboardView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Templates\ListBoxForm.resx">
+      <DependentUpon>ListBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\ListItemsView.resx">
+      <DependentUpon>ListItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Templates\ListViewForm.resx">
+      <DependentUpon>ListViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Templates\OneTextBoxForm.resx">
+      <DependentUpon>OneTextBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Protocols\ProtocolEventAddView.resx">
+      <DependentUpon>ProtocolEventAddView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\ProtocolEventEditView.resx">
+      <DependentUpon>ProtocolEventEditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Protocols\ProtocolRequestAddView.resx">
+      <DependentUpon>ProtocolRequestAddView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Protocols\ProtocolRequestEditView.resx">
+      <DependentUpon>ProtocolRequestEditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\UserEditView.resx">
+      <DependentUpon>UserEditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Templates\OneTextBoxTrueFalseForm.resx">
+      <DependentUpon>OneTextBoxTrueFalseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Protocols\TemplateOptionsForm.resx">
+      <DependentUpon>TemplateOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Templates\TwoTextBoxTrueFalseForm.resx">
+      <DependentUpon>TwoTextBoxTrueFalseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Templates\UCTemplate2View.resx">
+      <DependentUpon>UCTemplate2View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Templates\UCToolStripListView1.resx">
+      <DependentUpon>UCToolStripListView1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Toxikon.ProtocolManager_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StatusAnnotations_Required_32xSM_color.png" />
+    <None Include="Resources\StatusAnnotations_Required_16xMD_color.png" />
+    <None Include="Resources\action_add_16xMD.png" />
+    <None Include="Resources\action_Cancel_16xMD.png" />
+    <None Include="Resources\view_16xMD.png" />
+    <None Include="Resources\PencilAngled_16xMD_color.png" />
+    <None Include="Resources\action_create_16xMD.png" />
+    <None Include="Resources\class_16xMD.png" />
+    <None Include="Resources\Ordered%28Numbered%29ListOL_5795_24x.png" />
+    <None Include="Resources\AddIndexer_5546.png" />
+    <Content Include="TPMLogo.ico" />
+    <Content Include="TPMLogo2.ico" />
+    <Content Include="TPMLogo3.ico" />
+    <Content Include="TPMLogo4.ico" />
+    <None Include="Resources\Open_6296.png" />
+    <None Include="Resources\ZoomNeutral_16xlG.png" />
+    <None Include="Resources\Security_Shields_Complete_and_ok_16xLG_color.png" />
+    <None Include="Resources\move_to_bottom.png" />
+    <None Include="Resources\StatusAnnotations_Information_16xLG_color.png" />
+    <None Include="Resources\StatusAnnotations_Required_16xLG_color.png" />
+    <None Include="Resources\RSReport_16xLG.png" />
+    <None Include="Resources\StatusAnnotations_Complete_and_ok_16xLG_color.png" />
+    <None Include="Resources\PencilAngled_16xLG_color.png" />
+    <None Include="Resources\save_16xLG.png" />
+    <None Include="Resources\action_add_16xLG.png" />
+    <None Include="Resources\Bubble_16xLG.png" />
+    <None Include="Resources\checkbox_16xLG.png" />
+    <None Include="Resources\color_wheel_16xLG.png" />
+    <None Include="Resources\house_16xLG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
